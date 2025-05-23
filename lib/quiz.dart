@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocetak2/data/questions.dart';
 import 'package:pocetak2/questions_screen.dart';
 import 'package:pocetak2/starting_screen.dart';
 
@@ -11,6 +12,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  List<String> selectedAnswers = [];
   Widget? activeScreen;
 
   @override
@@ -19,9 +21,20 @@ class _QuizState extends State<Quiz> {
     super.initState();
   }
 
+  void selectAnswer(String answer) {
+    selectedAnswers.add(answer);
+
+    if (selectedAnswers.length == questions.length) {
+      setState(() {
+        selectedAnswers = [];
+        activeScreen = StartingScreen(switchScreen);
+      });
+    }
+  }
+
   void switchScreen() {
     setState(() {
-      activeScreen = QuestionsScreen();
+      activeScreen = QuestionsScreen(selectAnswer: selectAnswer);
     });
   }
 
