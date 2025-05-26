@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocetak2/answers.dart';
 import 'package:pocetak2/data/questions.dart';
 import 'package:pocetak2/questions_screen.dart';
 import 'package:pocetak2/starting_screen.dart';
@@ -23,11 +24,12 @@ class _QuizState extends State<Quiz> {
 
   void selectAnswer(String answer) {
     selectedAnswers.add(answer);
-
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        selectedAnswers = [];
-        activeScreen = StartingScreen(switchScreen);
+        activeScreen = Answers(
+          correctAnswersArray: selectedAnswers,
+          restartQuiz,
+        );
       });
     }
   }
@@ -35,6 +37,13 @@ class _QuizState extends State<Quiz> {
   void switchScreen() {
     setState(() {
       activeScreen = QuestionsScreen(selectAnswer: selectAnswer);
+    });
+  }
+
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = StartingScreen(switchScreen);
     });
   }
 

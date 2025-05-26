@@ -20,14 +20,14 @@ class StartingScreen extends StatelessWidget {
             Image.asset(
               "assets/images/quiz-logo.png",
               width: 200,
-              color: const Color.fromARGB(141, 255, 255, 255),
+              color: const Color.fromARGB(70, 103, 99, 99),
             ),
             SizedBox(height: 80),
             Text(
               "Let's take a Flutter quiz!",
               style: TextStyle(
                 fontSize: 20,
-                color: const Color.fromARGB(255, 253, 255, 241),
+                color: const Color.fromARGB(255, 103, 99, 99),
                 fontWeight: FontWeight.bold,
               ),
             ),
