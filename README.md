@@ -9,8 +9,8 @@ Feel free to share suggestions and feedback!
 
 ### App preview
 
-<img src="Screenshots/Image1.png" alt="Login" width="40%" height="40%"> 
+<img src="Screenshots/Image1.PNG" alt="Image1" width="40%" height="40%"> 
 
-<img src="Screenshots/Image2.png" alt="Tab1" width="40%" height="40%"> 
+<img src="Screenshots/Image2.PNG" alt="Image2" width="40%" height="40%"> 
 
-<img src="Screenshots/Image3.png" alt="Tab1-Details" width="40%" height="40%">
+<img src="Screenshots/Image3.PNG" alt="Image3" width="40%" height="40%">
