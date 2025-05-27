@@ -25,6 +25,7 @@ class AnswersSummary extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
+                      margin: EdgeInsets.only(top: 10),
                       alignment: Alignment.center,
                       height: 30,
                       width: 30,
